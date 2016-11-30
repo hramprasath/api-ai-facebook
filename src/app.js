@@ -16,7 +16,7 @@ var SEVER_IP_ADDR = process.env.OPENSHIFT_NODEJS_IP || process.env.HEROKU_IP ;
 var APIAI_ACCESS_TOKEN = "8b9e5e3adcb44c3badd08f68d54574ea" ; 
 var APIAI_LANG = 'en' ;
 var FB_VERIFY_TOKEN = "aiagent2016" ;
-var FB_PAGE_ACCESS_TOKEN = "EAAEziYhGZAZAIBAABLZAuLkFLCRcrbEg0wPlNtHwvENI2vOikW7uSoqpUZABfNSUZAWSwIVdqLThflu78IC2ic8AjUcEFSfTNtTq9ht03TPZCYvbCZAJaLiUnahD9krlEC0WsxEOcmcdDNUsTt4JJRPZB1ZAuYfS4eRILvbQZB8uXp2QZDZD";
+var FB_PAGE_ACCESS_TOKEN = "EAACEdEose0cBAOp7ZC4gWxYqq9Im3yqBuIKuiLsoXtQswJWfRYZAN6BaU7zQNNgjougrBvhPMh4topLI1LwKlZAIX0CcwkZCBZANV3d2SN6xfboRFbZCfqwmZCNQZBw93zWb7FfZBOZAwZB678ZC2od6OaZBZBZCkRn1EaqUR5j90rb8kKOcgZDZD";
 var APIAI_VERIFY_TOKEN = "aiagent2016" ;
 var apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
 var sessionIds = new Map();
@@ -65,33 +65,7 @@ function processEvent(event) {
 	    
         console.log("event content :- " +JSON.stringify(event.entry));
 	
-        /* if(event.entry)
-            {
-            console.log("Account Linking null - event");
-            if(event.messaging)
-            {
-                 console.log("Account Linking null - 0");
-             if(event.messaging.account_linking)
-                {
-                    console.log("event account_linking content :- " +JSON.stringify(event.messaging.account_linking));
-                    console.log("Account Linking null - 1");
-                 if (event.messaging.account_linking == undefined) 
-                 {
-                     console.log("Account Linking null - 2");
-                 }
-                 else {
-                         console.log("inside Account Linking ");  
-                         console.log("Account Linking convert: " + JSON.stringify(event.messaging.account_linking, null, 2));
-                         console.log("Account Linking convert: " + JSON.stringify(event.messaging.account_linking.authorization_code, null, 2));
-                         console.log("Account Linking convert: " + JSON.stringify(event.messaging.account_linking.status, null, 2));
-                         //session.send("Your account is linked now.");
-                         sendFBMessage(sender,  {text:"Your account is linked now."});
-                         getVzProfile(event,function (str){ getVzProfileCallBack(str,event)});   
-                         MainMenu(event);
-                 }
-             }
-            }
-             }*/
+       
 	    
 	    
         if (event.account_linking) 
