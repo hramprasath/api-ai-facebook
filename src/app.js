@@ -13,11 +13,11 @@ var util = require('util');
 
 var REST_PORT = (process.env.PORT || process.env.port || process.env.OPENSHIFT_NODEJS_PORT || 5000);
 var SEVER_IP_ADDR = process.env.OPENSHIFT_NODEJS_IP || process.env.HEROKU_IP ;
-var APIAI_ACCESS_TOKEN = "c8021e1a2dac4f85aee8f805a5a920b2" ; 
+var APIAI_ACCESS_TOKEN = "8b9e5e3adcb44c3badd08f68d54574ea" ; 
 var APIAI_LANG = 'en' ;
-var FB_VERIFY_TOKEN = "CAA30DE7-CC67-4CBA-AF93-2B1C5C4C19D4" ;
+var FB_VERIFY_TOKEN = "aiagent2016" ;
 var FB_PAGE_ACCESS_TOKEN = "EAAEziYhGZAZAIBAABLZAuLkFLCRcrbEg0wPlNtHwvENI2vOikW7uSoqpUZABfNSUZAWSwIVdqLThflu78IC2ic8AjUcEFSfTNtTq9ht03TPZCYvbCZAJaLiUnahD9krlEC0WsxEOcmcdDNUsTt4JJRPZB1ZAuYfS4eRILvbQZB8uXp2QZDZD";
-var APIAI_VERIFY_TOKEN = "verify123" ;
+var APIAI_VERIFY_TOKEN = "aiagent2016" ;
 var apiAiService = apiai(APIAI_ACCESS_TOKEN, {language: APIAI_LANG, requestSource: "fb"});
 var sessionIds = new Map();
 var userData = new Map();
